@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: moodtunes-app
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    envVars:
+      - key: SPOTIPY_CLIENT_ID
+        value: a1fc2401783d46b0954e235ceb446f8d
+      - key: SPOTIPY_CLIENT_SECRET
+        value: f73fb06bb65b4796be795029a0c4c0fa
